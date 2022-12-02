@@ -117,6 +117,7 @@ Platform.runLater(new Runnable() {
         jMenuItemColaSimple = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         MenuArbol = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         MenuBinario = new javax.swing.JMenuItem();
         MenuHASH = new javax.swing.JMenuItem();
@@ -238,13 +239,12 @@ Platform.runLater(new Runnable() {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jVIDEO))
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jButtonRegresar)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jVIDEO)
+                            .addComponent(jButtonRegresar))))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(36, Short.MAX_VALUE))
@@ -321,6 +321,14 @@ Platform.runLater(new Runnable() {
             }
         });
         jMenu3.add(MenuArbol);
+
+        jMenuItem4.setText("Grafo");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem4);
 
         jMenuBar1.add(jMenu3);
 
@@ -491,6 +499,13 @@ Platform.runLater(new Runnable() {
         seleccion.setVisible(true); 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+         Vista grafo = new Vista();
+        this.setVisible(false);
+        grafo.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -554,6 +569,7 @@ Platform.runLater(new Runnable() {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItemColaCirculare;
     private javax.swing.JMenuItem jMenuItemColaSimple;
     private javax.swing.JMenuItem jMenuItemListasDoblemente;
