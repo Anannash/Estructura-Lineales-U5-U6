@@ -6,7 +6,7 @@ import java.awt.Point;
 import java.util.ArrayList;
 
 /**
- *
+ *  Se necesita un netbeans de 8.1....
  * @author 
  */
 public class Vista extends javax.swing.JFrame {
